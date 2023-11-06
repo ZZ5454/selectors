@@ -4,31 +4,52 @@
         <meta charset="utf-8">
         <meta name="robots" content="noindex,nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>CSS Selectors by NAME HERE</title>
+        <title>CSS Selectors by Bezza Zelalem</title>
         <link href="css/pre.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <style>
             div#id-div{
                 background-color:yellow;
             }
+
             li.my-list{
                 background-color: orange;
             }
+
             li.new-list,div#new-div {
                 background-color: blue;
+            }
+
+            ul.my-kids > li {
+                background-color: green;
+            }
+
+            div.grandkids li {
+                background-color: red;
+            }
+
+           .add-border {
+                border: 1px solid #000;
+            }
+
+            .add-background {
+                background-color: gold;
             }
         </style>
     </head>
     <body>
         <header>
             
-            <h1 class="page-header">CSS Selectors by NAME HERE</h1>
+            <h1 class="page-header">CSS Selectors by Bezza Zelalem </h1>
             
         <nav>
             <ul>
                 <li><a href="#id">id</a></li>
                 <li><a href="#class">class</a></li>
                 <li><a href="#compound">compound</a></li>
+                <li><a href="#child">child</a></li>
+                <li><a href="#Descendant">Descendant</a></li>
+                <li><a href="#multipleclasses">multipleclasses</a></li>
             </ul>
         </nav> 
     </header>           
@@ -86,6 +107,68 @@
                     <li class="new-list">I'm in a li with a class named new-list</li>
                     <li class="new-list">I'm in a li with a class named new-list</li>
                     <li class="new-list">I'm in a li with a class named new-list</li>
+                </ul>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <legend><a id="Descendant">Descendant</a></legend>
+            <p>Using a descendant selector allows us to access all elements at any depth within the current element.</p>
+            <p>Here's how we hook an id attribute to an element:</p>
+            <pre><code>class="my-list"</code></pre>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>ul.my-kids > li{
+    background-color:orange;
+}</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div class="grandkids">
+                <ul>
+                    <li>I'm in a li inside a div with a class of grandkids</li>
+                    <li>I'm in a li inside a div with a class of grandkids</li>
+                    <li>I'm in a li inside a div with a class of grandkids</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="child">child</a></legend>
+            <p>A child selector allows us to access the next immediate elements inside the current element</p>
+            <p>Here's how we hook an class attribute to an descendent of element:</p>
+            <pre><code>class="my-list"</code></pre>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>ul.my-kids > li{
+    background-color:orange;
+}</code></pre>
+
+            <p>Here's what it looks like:</p>
+            <div>
+                <ul class="my-kids">
+                    <li>Im inside an li inside a ul with a class of my-kids</li>
+                    <li>Im inside an li inside a ul with a class of my-kids</li>
+                    <li>Im inside an li inside a ul with a class of my-kids</li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend><a id="multipleclasses">multiple classes</a></legend>
+            <p>More than one class can be applied to any item on the page</p>
+            <p>Here's how we hook an class attribute to an descendent of element:</p>
+            <pre><code>class="my-list"</code></pre>
+            <p>Here's how the CSS is applied to the element:</p>
+            <pre><code>ul.my-kids > li{
+    background-color:orange;
+}</code></pre>
+
+
+            <p>Here's what it looks like:</p>
+            <div>
+                <ul>
+                    <li class="add-border add-background">I'm in a li that has 2 classes applied</li>
+                    <li class="add-border add-background">I'm in a li that has 2 classes applied</li>
+                    <li class="add-border add-background">I'm in a li that has 2 classes applied</li>
                 </ul>
             </div>
         </fieldset>
