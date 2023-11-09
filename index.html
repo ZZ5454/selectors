@@ -62,7 +62,7 @@
             <pre><code>id="id-div"</code></pre>
             <p>Here's how the CSS is applied to the element:</p>
             <pre><code>div#id-div{
-    background-color:yellow;
+    background-color: yellow;
 }</code></pre>
 
 
@@ -76,8 +76,8 @@
             <p>Here's how we hook an id attribute to an element:</p>
             <pre><code>class="my-list"</code></pre>
             <p>Here's how the CSS is applied to the element:</p>
-            <pre><code>div#id-div{
-    background-color:orange;
+            <pre><code>li.my-list {
+    background-color: orange;
 }</code></pre>
 
 
@@ -96,8 +96,8 @@
             <legend><a id="compound">compound</a></legend>
             <p>A compound selector allows multiple selectors seperated by commas. In this way we can apply the same rules to the several selectors.</p>
             <p>Here's how the CSS is applied to the element:</p>
-            <pre><code>div#id-div{
-    background-color:blue;
+            <pre><code>li.new-list, div#new-div {
+    background-color: blue;
 }</code></pre>
 
 
@@ -117,8 +117,9 @@
             <p>Here's how we hook an id attribute to an element:</p>
             <pre><code>class="my-list"</code></pre>
             <p>Here's how the CSS is applied to the element:</p>
-            <pre><code>ul.my-kids > li{
-    background-color:orange;
+            <pre><code>div.grandkids li {
+    background-color: red;
+            
 }</code></pre>
 
 
@@ -138,8 +139,8 @@
             <p>Here's how we hook an class attribute to an descendent of element:</p>
             <pre><code>class="my-list"</code></pre>
             <p>Here's how the CSS is applied to the element:</p>
-            <pre><code>ul.my-kids > li{
-    background-color:orange;
+            <pre><code>ul.my-kids > li {
+    background-color: green;
 }</code></pre>
 
             <p>Here's what it looks like:</p>
@@ -158,8 +159,8 @@
             <p>Here's how we hook an class attribute to an descendent of element:</p>
             <pre><code>class="my-list"</code></pre>
             <p>Here's how the CSS is applied to the element:</p>
-            <pre><code>ul.my-kids > li{
-    background-color:orange;
+            <pre><code>.add-background {
+    background-color: gold;
 }</code></pre>
 
 
